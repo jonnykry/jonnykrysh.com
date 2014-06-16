@@ -10,16 +10,16 @@
 		<link href="stylesheet.css" rel="stylesheet">
 	</head>
   	<body>
-	<script>
-		$('.carousel').carousel()
-	</script>
-    <div class="container">
-    	<div class="header">
-        	<h1>Jonny Krysh</h1>
-        	<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      	</div>
-    </div><!-- /.container -->
 
+    <div class="nav">
+      <ul class="nav nav-tabs">
+        <li><a href="index">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="resume">Resume</a></li>
+        <li><a href="projects">Projects</a></li>
+        <li class="active"><a href="contact">Contact</a></li>
+      </ul>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

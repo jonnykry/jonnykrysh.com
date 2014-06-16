@@ -1,5 +1,5 @@
-www.jonnykrysh.com
+# www.jonnykrysh.com
 
-# The personal domain for Jonny Krysh.
-# Created with Twitter Bootstrap "Cyborg" Theme.
-# A work in progress.
+The personal domain for Jonny Krysh.
+Created with Twitter Bootstrap "Cyborg" Theme.
+A work in progress.

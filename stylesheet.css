@@ -36,9 +36,11 @@ body {
 	height: 60px;
 }
 #footer {
+	border-top: 1px solid #282828;
 	background-color: #000000;
 }
 
 .footer-text {
+	color: white;
 	padding-top: 20px;
 }

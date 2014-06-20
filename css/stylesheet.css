@@ -2,6 +2,10 @@ body {
 	padding-top: 50px;
 }
 
+h1 {
+  font-size: 5em;
+}
+
 @font-face {
     font-family: 'josefin_slabsemibold';
     src: url('josefinslab-semibold.eot');

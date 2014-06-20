@@ -293,7 +293,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #D17659;
+  color: #F0563D;
   text-decoration: none;
 }
 a:focus {
@@ -3505,6 +3505,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-tabs > li > a:hover {
   color: #ffffff;
+  background-color: #F0563D;
   border-color: transparent transparent #ffffff;
 }
 .nav-tabs > li.active > a,

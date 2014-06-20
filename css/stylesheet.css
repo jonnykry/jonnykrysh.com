@@ -2,17 +2,6 @@ body {
 	padding-top: 50px;
 }
 
-h1 {
-	font-size: 60px;
-	font-family: 'FontAwesome';
-}
-
-h4 {
-	color: #777E85;
-	font-weight: lighter;
-	font-family: 'FontAwesome';
-}
-
 @font-face {
     font-family: 'josefin_slabsemibold';
     src: url('josefinslab-semibold.eot');
@@ -35,12 +24,12 @@ h4 {
 }
 
 .fa {
-	color: white;
+	color: #2C2F3B;
 	padding: .5em;
 }
 
 .fa:hover {
-	color: #2a9fd6;
+	color: #F0563D;
 }
 
 p {
@@ -52,7 +41,7 @@ h5 {
 }
 
 .navbar-fixed-top {
-	background-color: #060606;
+	background-color: #EEF0BD;
 }
 
 .nav-tabs > li, .nav-pills > li {
@@ -75,6 +64,7 @@ h5 {
 	padding: 1em 0;
 }
 
+/*
 .progress-bar2 {
   float: left;
   width: 0%;
@@ -148,19 +138,19 @@ h5 {
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
-}
+}*/
 
 #push,
 #footer {
 	height: 60px;
 }
 #footer {
-	border-top: 1px solid #282828;
-	background-color: #060606;
+	border-top: 1px solid #2C2F3B;
+	background-color: #EEF0BD;
 }
 
 .footer-text {
-	color: white;
+	color: #2C2F3B;
 	padding-top: 20px;
 }
 

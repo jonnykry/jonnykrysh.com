@@ -18,8 +18,6 @@
 
 	/* Let's prepare the message for the e-mail */
 
-	$subject = "Someone has sent you a message";
-
 	$message = "
 
 	Someone has sent you a message using your contact form:

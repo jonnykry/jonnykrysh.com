@@ -296,6 +296,7 @@ i.scroll {
 /* LastFM Widget */
 
 #text {
+  color: #FFF;  
   margin: 5px 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -320,7 +321,7 @@ i.scroll {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   margin-right: 10px;
-  z-index: 9998!important;
+  z-index: 9998!important;  
 }
 
 /* Bouncing Arrows */
@@ -340,10 +341,6 @@ i.scroll {
 /* Mobile / Responsive */
 
 @media (max-width: 768px) {
-	
-/*  .header {
-	background: url(../img/bg.jpg) no-repeat center center scroll; 
-  }*/
 
   .landingHeader {
     font-size: 7em;
@@ -351,10 +348,6 @@ i.scroll {
 
   p {
     font-size: 1.5em;
-  }
-
-  .floatBottom {
-    visibility: hidden;
   }
 
 }

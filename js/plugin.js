@@ -1,13 +1,16 @@
 // To use this widget, edit your username / api key into the URL
 // Please avoid using my key :')
 
+// Start hidden on landing
+$("#widget").css({'visibility':'hidden'});
+
 var artist = null;
 var song = null;
 var streamable = null;
 var album = null;
 var albumimg = null;
 var txt = "";
-var scrollYpos = null;
+var scrollYpos = 0;
 
 var xml = httpGet("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jonnydoesmusic&api_key=c64600ddca04dfc310703c59fe1b5230");
 
@@ -24,7 +27,7 @@ $("#widget").append(text);
 $(window).scroll(function() {
 	scrollYpos = $(document).scrollTop();
 	if(scrollYpos == 0) {
-		$('#widget').css({'visibility':'hidden'});
+		$("#widget").css({'visibility':'hidden'});
 	}
 	else {
 		$("#widget").css({'visibility':'visible'});

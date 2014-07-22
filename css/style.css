@@ -295,27 +295,33 @@ i.scroll {
 
 /* LastFM Widget */
 
-/*
+#text {
+  margin: 5px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#text a {
+  color: #FFF;
+}
+
 .floatBottom {
   background: #000;
-  padding: 1px;
-  color: #FFF;
+  opacity: 0.8;
+  padding: 2px;
   position: fixed;
   right: 0;
   bottom: 0;
-  height: 30px;
+  height: 45px;
   width: 350px;
-  border: 2px solid gray;
-  border-radius: 5px;
+  border-radius: 15px;
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  margin-right: 40px;
-  opacity: 0.5;
+  margin-right: 10px;
   z-index: 9998!important;
-  overflow:hidden;
 }
-*/
 
 /* Bouncing Arrows */
 
@@ -345,6 +351,10 @@ i.scroll {
 
   p {
     font-size: 1.5em;
+  }
+
+  .floatBottom {
+    visibility: hidden;
   }
 
 }

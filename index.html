@@ -48,8 +48,9 @@
         <!-- /Side Menu -->
 
         <!-- Floating Widget -->
-        <!--<div id="widget" class="floatBottom">
-    </div> -->
+        <div id="widget" class="floatBottom">
+
+        </div> 
         <!-- /Floating Widget -->
 
         <!-- Full Page Image Header Area -->
@@ -230,8 +231,12 @@
                             </li>
                             <br>
                             <li>
-                                <p><a href="https://github.com/jonnykry/JSONResumeWebApp" target="_blank">JSONResumeWebApp</a> - a web UI created for a user-friendly experience when creating a <a href="http://jsonresume.org/" target="_blank">JSON Resume</a>. I used Bootstrap to create it. It's a work in progress &mdash; I'm currently working on a resume theme preview.</p>
+                                <p><a href="https://github.com/jonnykry/JSONResumeWebApp" target="_blank">LastFM #np</a> - The widget that is found on the bottom right of this website.  It was my first experimentation with Javascript.  I'm continuing to add more themes for it and make it easier to integrate with any website.</p>
                             </li>
+                            <br>                            
+                            <li>
+                                <p><a href="https://github.com/jonnykry/JSONResumeWebApp" target="_blank">JSONResumeWebApp</a> - a web UI created for a user-friendly experience when creating a <a href="http://jsonresume.org/" target="_blank">JSON Resume</a>. I used Bootstrap to create it. It's a work in progress &mdash; I'm currently working on a resume theme preview.</p>
+                            </li>                         
                             <br>
                             <br>
                         </ul>
@@ -346,29 +351,31 @@
         <script src="js/jquery-1.10.2.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/plugin.js"></script>
-        <!-- <script>
-    $(document).ready( function() {
-        if (document.body.scrollTop > 150) {
-            $("#widget:visible").hide();
-            $("#text:visible").hide();
-        }
-    });
-    </script>    
-        -->
 
         <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+
+        <script>
+            $(window).on("scroll", function(){
+              if($("body").scrollTop() === 500){
+                $("#widget").show();
+              }
+            });
+        </script>
+
         <script>
             $("#menu-close").click(function(e) {
                 e.preventDefault();
                 $("#sidebar-wrapper").toggleClass("active");
             });
         </script>
+
         <script>
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
                 $("#sidebar-wrapper").toggleClass("active");
             });
         </script>
+
         <script>
             $(function() {
                 $('a[href*=#]:not([href=#])').click(function() {
@@ -386,6 +393,7 @@
                 });
             });
         </script>
+
         <script>
             $(document).ready(function() {
                 $("#iconBounce").effect("bounce", {

@@ -249,6 +249,16 @@ p {
   color: #1E252B;
 }
 
+.contact .panel {
+  background: none;
+  border: none;
+  color: #000;
+}
+
+.contact label {
+  text-align: center;
+}
+
 /* Footer */
 
 footer {

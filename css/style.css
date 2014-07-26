@@ -147,13 +147,18 @@ p {
   background-size: cover; 
 }
 
-.layout {     /* Adds an opaque black layer over image background */
-  background-color: rgba(0, 0, 0, 0.3);
+/* Adds an opaque black layer over image background */
+
+.layout {     
+  background: rgba(0, 0, 0, 0.3) no-repeat center center fixed;
+  display: table; /* Firefox fix */
+  height: 100%;
+  width: 100%;
   position: relative;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Section Headers */
@@ -327,15 +332,26 @@ i.scroll {
 /* Bouncing Arrows */
 
 #bouncer   {
-  -webkit-animation: bounce 1s infinite ;
+  -webkit-animation: bounce 1s infinite;
+  -moz-animation: bounce 1s infinite;  
 }
 
+/* Chrome / Safari */
 @-webkit-keyframes bounce {
     0% { -webkit-transform: translate3d(0,   0px,0); 
          -webkit-animation-timing-function: ease-out; }
    50% { -webkit-transform: translate3d(0,-10px,0); 
          -webkit-animation-timing-function: ease-in; }
   100% { -webkit-transform: translate3d(0,   0px,0); }
+}
+
+/* Firefox */
+@-moz-keyframes bounce {
+    0% { -moz-transform: translate3d(0,   0px,0); 
+         -moz-animation-timing-function: ease-out; }
+   50% { -moz-transform: translate3d(0,-10px,0); 
+         -moz-animation-timing-function: ease-in; }
+  100% { -moz-transform: translate3d(0,   0px,0); }
 } 
 
 /* Mobile / Responsive */

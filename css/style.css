@@ -1,4 +1,7 @@
 /* Global Styles */
+* {
+  outline: none;
+}
 
 html,
 body {
@@ -310,6 +313,16 @@ i.scroll {
 
 #text a {
   color: #FFF;
+}
+
+#text .glyphicon {
+  background: none;
+  border: none;
+  padding-right: 10px;
+}
+
+#text .glyphicon:active {
+
 }
 
 .floatBottom {

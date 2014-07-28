@@ -19,9 +19,9 @@ var i = 0;
 
 var txt = displayTrack(track);
 
-document.write(txt);
+// document.write(txt);
 
-$("#widget").append(text);
+// $("#widget").append(text);
 
 // Hides widget on landing page
 $(window).scroll(function() {
@@ -65,14 +65,16 @@ function displayTrack(track)
         	albumimg = (track[0].getElementsByTagName("image")[0].childNodes[0].nodeValue);   
         }
     } catch(err) {
-	    txt = "<div id='text'><a href='http://www.last.fm/user/jonnydoesmusic' target='_blank'>" 
-	    + "<img src='" + albumimg + "' style='padding-right: 5px;'/> #np - <strong>" + artist + ' - "' + song + '"' + "</strong></a></div>";
-		return txt;
+	    txt = "<a href='http://www.last.fm/user/jonnydoesmusic' target='_blank'>" 
+	    + "<img src='" + albumimg + "' style='padding-right: 5px;'/> #np - <strong>" + artist + ' - "' + song + '"' + "</strong></a>";
+		$("#text").append(txt);
+        return txt;
     }
 
     // This text contains the html that is appended to that page.
     // Edit the link to contain your username. 
-    txt = "<div id='text'><a href='http://www.last.fm/user/jonnydoesmusic' target='_blank'>" 
-    + "<img src='" + albumimg + "' style='padding-right: 5px;'/> #np - <strong>" + artist + ' - "' + song + '"' + "</strong></a></div>";
+    txt = "<a href='http://www.last.fm/user/jonnydoesmusic' target='_blank'>" 
+    + "<img src='" + albumimg + "' style='padding-right: 5px;'/> #np - <strong>" + artist + ' - "' + song + '"' + "</strong></a>";
+    $("#text").append(txt);
     return txt;
 }

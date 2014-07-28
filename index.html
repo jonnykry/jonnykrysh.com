@@ -7,7 +7,7 @@
         <meta name="description" content="Jonny Krysh is a  prospective full-time developer studying software engineering at Iowa State University.  He strives to contribute to open source and help solve problems with code.">
         <meta name="author" content="Jonny Krysh">        
 
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="http://www.jonnykrysh.com/favicon.ico">
 
         <title>Jonny Krysh</title>
 
@@ -52,7 +52,7 @@
 
         <!-- Floating Widget -->
         <div id="widget" class="floatBottom">
-
+            <div id="text"><button class="glyphicon glyphicon-play"></button></div>
         </div> 
         <!-- /Floating Widget -->
 
@@ -108,7 +108,7 @@
                             <br>When I'm not coding or doing school work, I'm:
                             <br>Browsing <a href="https://news.ycombinator.com/" target="_blank">Hacker News</a>
 
-                            <br>Browsing Reddit
+                            <br>Browsing <a href="http://www.reddit.com" target="_blank">Reddit</a>
                             <br>Skateboarding and Juggling
                             <br>Finding new music
                             <br>or - when I'm in Chicago - drumming</p>
@@ -355,30 +355,24 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/plugin.js"></script>
 
-        <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+        <!-- Begin Custom JS -->
 
-        <script>
-            $(window).on("scroll", function(){
-              if($("body").scrollTop() === 500){
-                $("#widget").show();
-              }
-            });
-        </script>
-
+        <!-- Menu JS -->
         <script>
             $("#menu-close").click(function(e) {
                 e.preventDefault();
                 $("#sidebar-wrapper").toggleClass("active");
             });
         </script>
-
         <script>
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
                 $("#sidebar-wrapper").toggleClass("active");
             });
         </script>
+        <!-- / Menu JS -->
 
+        <!-- Smooth Scrolling JS -->
         <script>
             $(function() {
                 $('a[href*=#]:not([href=#])').click(function() {
@@ -396,7 +390,9 @@
                 });
             });
         </script>
+        <!-- / Smooth Scrolling JS -->
 
+        <!-- Bouncing Buttons ( top and bottom ) -->
         <script>
             $(document).ready(function() {
                 $("#iconBounce").effect("bounce", {
@@ -404,6 +400,7 @@
                 }, 300);
             });
         </script>
+        <!-- / Bouncing Buttons ( top and bottom ) -->
     </body>
 
 </html>

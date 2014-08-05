@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Jonny Krysh is a  prospective full-time developer studying software engineering at Iowa State University.  He strives to contribute to open source and help solve problems with code.">
-        <meta name="author" content="Jonny Krysh">        
+        <meta name="author" content="Jonny Krysh">
 
         <link rel="icon" href="http://www.jonnykrysh.com/favicon.ico">
 
         <title>Jonny Krysh</title>
 
         <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
         <!-- Bootstrap core CSS -->
@@ -24,7 +24,7 @@
         <!-- Font Awesome CSS -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     </head>
-    
+
     <body>
         <!-- Side Menu --> <a id="menu-toggle" href="#" class="btn btn-default btn-lg toggle"><i class="fa fa-bars"></i></a>
 
@@ -52,34 +52,29 @@
 
         <!-- Floating Widget -->
         <div id="widget" class="floatBottom">
-            <div id="text"><button class="glyphicon glyphicon-play"></button></div>
-        </div> 
+            <div id="text"></div>
+        </div>
         <!-- /Floating Widget -->
 
         <!-- Full Page Image Header Area -->
-        <div id="top" class="header text-center">
-            <div class="layout">
-                <div class="vertText">
-                    <header class="landingHeader">Jonny Krysh</header>
-                    <br>
-                    <br>
-                    <br>
-                    <p>A prospective full-time developer with the drive to:
-                        <br>make a difference within software,
-                        <br>write outstanding code,
-                        <br>attain serious goals,
-                        <br>and help others along the way.</p>
-                    <br>
-                    <br>
-                    <br>
-                    <p>"Live as if you were to die tomorrow. Learn as if you were to live forever."
-                        <br>&mdash; Mahatma Gandhi</p>
-                    <br>
-                    <br>
-                    <div id="bouncer"><a href="#about"><i class="fa fa-chevron-down fa-5x"></i></a>
-                    </div>
+        <div id="top" class="homepage header">
+          <video muted autoplay loop preload="auto" height="100%" width="100%" poster="img/bg.jpg" id="bgvid">
+            <source src="https://s3.amazonaws.com/webmovie.mp4/webmovie.mp4" type="video/mp4" />
+            <source src="https://s3.amazonaws.com/webmovie.mp4/webmovie.webm" type="video/webm" />
+          </video>
+
+          <div class="layout">
+            <div class="topText">
+              <header class="topItem landingHeader pull-left">Hey, I'm Jonny Krysh!<br><br>                
+                <span class="topHidden">This is a day in the life of me:<br>a front-end software developer,<br>a skateboarder, and a juggler.</span><br><span class="length">(the video is 4:00 in length)</span><br><br>
+                <button id="playSound" class="btn btn-default">Enable / Disable Sound</button>
+                <div id="down"><a href="#about"><i class="fa fa-chevron-down scroll fa-2x"></i></a>
                 </div>
+            </header>
+                
             </div>
+          </div>
+
         </div>
         <!-- /Full Page Image Header Area -->
 
@@ -151,11 +146,9 @@
                     <hr>
                     <div class="col-sm-3">
                          <h1 class="text-center">Languages<br><br>
-                        <i class="fa fa-language fa-2x"></i></h1>
-                        <br>
-                        <p class="text-center">In no particular order:
-                            <br>
-                            <br>English
+                        <i class="fa fa-language fa-2x"></i></h1>                        
+                        <p class="text-center">                            
+                            English
                             <br>Java
                             <br>C
                             <br>C++
@@ -168,11 +161,9 @@
                     </div>
                     <div class="col-sm-3">
                          <h1 class="text-center">API's / Libraries<br><br>
-                        <i class="fa fa-book fa-2x"></i></h1>
-                        <br>
-                        <p class="text-center">In order of familiarity:
-                            <br>
-                            <br>Selenium WebDriver
+                        <i class="fa fa-book fa-2x"></i></h1>                    
+                        <p class="text-center">                            
+                            Selenium WebDriver
                             <br>JQuery
                             <br>Reddit
                             <br>LastFM
@@ -183,12 +174,10 @@
                     </div>
                     <div class="col-sm-3">
                          <h1 class="text-center">Systems<br><br>
-                        <i class="fa fa-laptop fa-2x"></i></h1> 
-                        <p class="text-center">Current System:
-                            <br>Ubuntu w/ GNOME
-                            <br>
+                        <i class="fa fa-laptop fa-2x"></i></h1>
+                        <p class="text-center">
+                            Linux <br>(Ubuntu GNOME / Mint)
                             <br>Windows 7/8
-                            <br>Linux
                             <br>Mac OSX
                             <br>
                             <br>
@@ -196,8 +185,7 @@
                     </div>
                     <div class="col-sm-3">
                          <h1 class="text-center">Other<br><br>
-                        <i class="fa fa-briefcase fa-2x"></i></h1>
-                        <br>
+                        <i class="fa fa-briefcase fa-2x"></i></h1>                        
                         <p class="text-center">SVN
                             <br>Git
                             <br>Eclipse
@@ -226,30 +214,28 @@
                 <div class="row">
                     <hr>
                     <div class="col-md-6">
-                         <h1 class="text-center">Personal</h1>
                         <br>
                         <ul>
                             <li>
-                                <p><a href="https://github.com/jonnykry/jonnykrysh.com" target="_blank">jonnykrysh.com</a> - most recent version of my personal website. I created it using <a href="http://startbootstrap.com/stylish-projects" target="_blank">this theme</a> as a base. From there, I re-structured and chose my own design path.</p>
+                                <p><a href="https://github.com/jonnykry/jonnykrysh.com" target="_blank">jonnykrysh.com</a> - you're here. I created this based off a theme from <a href="http://startbootstrap.com" target="_blank">Start Bootstrap</a>. From there, I re-structured and chose my own design path.  I implemented many modifications, such as the video at the top and contact form below.</p>
                             </li>
                             <br>
                             <li>
-                                <p><a href="http://www.jonnykrysh.com/lastfmnp" target="_blank">LastFM #NowPlaying</a> - Widget found in bottom right.  It was my first experimentation with Javascript / LastFM API.  I'm continuing to add more themes for it and make it easier to integrate with any website.</p>
+                                <p><a href="http://www.jonnykrysh.com/lastfmnp" target="_blank">LastFM #NowPlaying</a> - Widget found in bottom right.  It was my first experimentation with Javascript / LastFM API.  I'm continuing to add more themes for it and make it easier to integrate with any website.  Also working on a play button to sample songs.</p>
                             </li>
-                            <br>                            
-                            <li>
-                                <p><a href=" http://jonnykry.github.io/JSONResumeWebApp" target="_blank">JSONResumeWebApp</a> - a web app for a user-friendly experience creating a <a href="http://jsonresume.org/" target="_blank">JSON Resume</a>. I used Bootstrap to create it. A work in progress.</p>
-                            </li>                         
                             <br>
                             <br>
                         </ul>
                     </div>
                     <div class="col-md-6">
-                         <h1 class="text-center">Contributions</h1>
                         <br>
                         <ul>
                             <li>
-                                <p><a href="https://github.com/karan/jReddit" target="_blank">jReddit</a> - a Java wrapper for Reddit's API. I implemented methods and helped clean / comment code. My commits can be viewed <a href="https://github.com/karan/jReddit/commits?author=jonnykry" target="_blank">here</a>. I'm looking to use this for a personal project in the future.</p>
+                                <p><a href="https://github.com/karan/jReddit" target="_blank">jReddit</a> - a Java wrapper for Reddit's API. I worked Reddit REST calls into Java methods and helped clean / comment code. My commits can be viewed <a href="https://github.com/karan/jReddit/commits?author=jonnykry" target="_blank">here</a>. I'm looking to use this to create a Reddit bot in the future.</p>
+                            </li>
+                            <br>                                            
+                            <li>
+                                <p><a href=" http://jonnykry.github.io/JSONResumeWebApp" target="_blank">JSONResumeWebApp</a> - a web app for a user-friendly experience creating a <a href="http://jsonresume.org/" target="_blank">JSON Resume</a>.  My first Bootstrap expirement.  The code is poor quality, but it is mobile friendly.  A work in progress.</p>
                             </li>
                         </ul>
                     </div>
@@ -292,25 +278,25 @@
                                 <div class="form-group">
                                     <label for="inputName" class="col-lg-2 col-lg-offset-1">Name</label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="inputName" name="inputName">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-lg-2 col-lg-offset-1">Email</label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email">
+                                        <input type="text" class="form-control" id="inputEmail" name="inputEmail">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputSubject" class="col-lg-2 col-lg-offset-1">Subject</label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message">
+                                        <input type="text" class="form-control" id="inputSubject" name="inputSubject">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword1" class="col-lg-2 col-lg-offset-1">Message</label>
                                     <div class="col-lg-6">
-                                        <textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message"></textarea>
+                                        <textarea class="form-control" rows="4" id="inputMessage" name="inputMessage"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -343,8 +329,8 @@
                     <div class="col-md-12 text-center">
                         <hr>
                         <p>Jonny Krysh &mdash; &copy;2014
-                            <br>Feel free to clone the source on <a href="http://github.com/jonnykry/jonnykrysh.com" target="_blank">GitHub</a>.
-                            <br>Background image found <a href="http://unsplash.com/" target="_blank">here</a>. By Vadim Sherbakov.</p>
+                            <br>Video filmed by Jake Graves
+                            <br>Song in video is Maps & Atlases - "Israeli Caves"
                     </div>
                 </div>
             </div>
@@ -372,6 +358,15 @@
             });
         </script>
         <!-- / Menu JS -->
+
+        <!-- Play Vid Sound JS -->
+        <script>
+          $('#playSound').click(function() {
+            var audioElm = document.getElementById('bgvid');
+            audioElm.muted = !audioElm.muted;
+          });
+        </script>
+        <!-- / PLay Vid Sound JS -->
 
         <!-- Smooth Scrolling JS -->
         <script>

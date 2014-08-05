@@ -5,40 +5,13 @@
 
 html,
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;  
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   height: 100%;
   width: 100%;
 }
 
 p {
   font-size: 1.8em;
-}
-
-/* Landing Page */
-
-#top {
-  color: #FFF;
-}
-
-#top a {
-  color: #FFF;
-}
-
-.landingHeader {
-  font-size: 220px;
-}
-
-.vert-text {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.vert-text h1 {
-  padding: 0;
-  margin: 0;
-  font-size: 7em;
-  font-weight: 600;
 }
 
 /* Side Menu */
@@ -128,7 +101,7 @@ p {
   margin: 5px 5px 0 0;
 }
 
-/* Full Page Image and Header */
+/* Full Page Video and Header */
 
 .header a {
   color: #000;
@@ -138,22 +111,37 @@ p {
   color: #580000;
 }
 
+#bgvid {
+  position:fixed;
+  z-index: -100;
+  top:0;
+  left:0;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+video[poster] {
+  background: url(../img/bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .header {
-  display: table;
   height: 100%;
   width: 100%;
-  position: relative;
-  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background: none;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
+  background-size: cover;
 }
 
-/* Adds an opaque black layer over image background */
-
-.layout {     
-  background: rgba(0, 0, 0, 0.3) no-repeat center center fixed;
+.layout { /* Adds an opaque black layer over image background */
+  background: rgba(0, 0, 0, 0.5) no-repeat center center fixed;
   display: table; /* Firefox fix */
   height: 100%;
   width: 100%;
@@ -166,16 +154,48 @@ p {
 
 /* Section Headers */
 
+.sectionHead {
+  font-size: 5em;
+}
+
+/* Top */
+
+.topText {
+  margin-top: 290px;
+  margin-left: 60px;
+  padding: 15px 25px;
+  color: #FFF;
+  display: inline-block;
+}
+
+.length, #playSound, .hide {
+  visibility: visible;
+}
+
 .landingHeader, .sectionHead {
-  font-family: 'Yanone Kaffeesatz', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-family: 'Yanone Kaffeesatz', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .landingHeader {
-  font-size: 230px;
+  padding: 25px 25px;
+  color: #FFF;
+  font-size: 2em;
 }
 
-.sectionHead {
-  font-size: 6em;
+.landingHeader .btn {
+  background: none;
+  color: #FFF;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.length {
+  font-size: 17px;
+}
+
+#down {
+  margin-top: 25px;
+  margin-left: 56px;
 }
 
 /* About */
@@ -214,7 +234,7 @@ p {
 
 .projects {
   color: #FFF;
-  background: #626261;
+  background: #1E252B;
   padding: 50px 0;
 }
 
@@ -238,6 +258,7 @@ p {
 /* Contact */
 
 .contact {
+  padding-top: 50px;
   color: #000;
   background: #D6C4AB;
   text-align: center;
@@ -263,8 +284,33 @@ p {
   color: #000;
 }
 
-.contact label {
-  text-align: center;
+.contact input, .contact textarea {
+  color: #FFF;
+  background: none;
+  border: 1px solid #000;
+}
+
+.contact input:focus, .contact textarea:focus {
+  color: #000;
+  outline: none !important;
+  border:1px solid #000;
+  box-shadow: 0 0 10px #000;
+}
+
+.contact .btn {
+  background: none;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.contact .btn:hover {
+  box-shadow: 0 0 10px #000;  
+}
+
+.contact .btn:focus {
+  outline: none !important;
+  border:1px solid #000;
+  box-shadow: 0 0 10px #000;  
 }
 
 /* Footer */
@@ -304,7 +350,7 @@ i.scroll {
 /* LastFM Widget */
 
 #text {
-  color: #FFF;  
+  color: #FFF;
   margin: 5px 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -321,10 +367,6 @@ i.scroll {
   padding-right: 10px;
 }
 
-#text .glyphicon:active {
-
-}
-
 .floatBottom {
   background: #000;
   opacity: 0.8;
@@ -339,44 +381,88 @@ i.scroll {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   margin-right: 10px;
-  z-index: 9998!important;  
+  z-index: 9998!important;
 }
 
 /* Bouncing Arrows */
 
 #bouncer   {
   -webkit-animation: bounce 1s infinite;
-  -moz-animation: bounce 1s infinite;  
+  -moz-animation: bounce 1s infinite;
 }
 
 /* Chrome / Safari */
 @-webkit-keyframes bounce {
-    0% { -webkit-transform: translate3d(0,   0px,0); 
+    0% { -webkit-transform: translate3d(0,   0px,0);
          -webkit-animation-timing-function: ease-out; }
-   50% { -webkit-transform: translate3d(0,-10px,0); 
+   50% { -webkit-transform: translate3d(0,-10px,0);
          -webkit-animation-timing-function: ease-in; }
   100% { -webkit-transform: translate3d(0,   0px,0); }
 }
 
 /* Firefox */
 @-moz-keyframes bounce {
-    0% { -moz-transform: translate3d(0,   0px,0); 
+    0% { -moz-transform: translate3d(0,   0px,0);
          -moz-animation-timing-function: ease-out; }
-   50% { -moz-transform: translate3d(0,-10px,0); 
+   50% { -moz-transform: translate3d(0,-10px,0);
          -moz-animation-timing-function: ease-in; }
   100% { -moz-transform: translate3d(0,   0px,0); }
-} 
+}
 
 /* Mobile / Responsive */
 
 @media (max-width: 768px) {
 
+  #top {
+    min-height: 100%;
+    min-width: 100%;
+  }
+
   .landingHeader {
+    color: #FFF;
     font-size: 7em;
+  }
+
+  .topText {
+    margin-top: 380px 30px;
+  }
+
+  .topItem {
+    padding: 10% 0;
+    font-size: 2em;
+  }
+
+  .length, #playSound, .hide, .topHidden {
+    visibility: hidden;
+    display: none;
+  }
+
+  .topText i {
+    margin: 0;
+    padding: 0;
+    top: 0;
+  }
+
+  .header {
+    background: url(../img/rsz_bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #down {
+    visibility: hidden;
+    display: none;
   }
 
   p {
     font-size: 1.5em;
+  }
+
+  video {
+    display: none;
+    visibility: hidden;
   }
 
 }

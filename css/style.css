@@ -103,6 +103,10 @@ p {
 
 /* Full Page Video and Header */
 
+.mobileText {
+  visibility: hidden;
+}
+
 .header a {
   color: #000;
 }
@@ -111,23 +115,24 @@ p {
   color: #580000;
 }
 
-#bgvid {
-  position:fixed;
-  z-index: -100;
-  top:0;
-  left:0;
-  min-width: 100%;
-  min-height: 100%;
-  height: auto;
-  width: auto;
+#top {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url(../img/bg2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-video[poster] {
-  background: url(../img/bg.jpg);
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+#bgvid { /* This is really confusing... */
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .header {
@@ -141,7 +146,7 @@ video[poster] {
 }
 
 .layout { /* Adds an opaque black layer over image background */
-  background: rgba(0, 0, 0, 0.5) no-repeat center center fixed;
+  background: rgba(0, 0, 0, 0.3) no-repeat center center fixed;
   display: table; /* Firefox fix */
   height: 100%;
   width: 100%;
@@ -161,15 +166,15 @@ video[poster] {
 /* Top */
 
 .topText {
-  margin-top: 290px;
+  margin-top: 100px;
   margin-left: 60px;
   padding: 15px 25px;
   color: #FFF;
   display: inline-block;
 }
 
-.length, #playSound, .hide {
-  visibility: visible;
+#playVideo {
+  padding: 5px 25px;
 }
 
 .landingHeader, .sectionHead {
@@ -190,12 +195,12 @@ video[poster] {
 }
 
 .length {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 #down {
   margin-top: 25px;
-  margin-left: 56px;
+  margin-left: 65px;
 }
 
 /* About */
@@ -205,6 +210,7 @@ video[poster] {
 }
 
 .about {
+  position: relative;
   background: #1E252B;
   color: white;
 }
@@ -414,44 +420,32 @@ i.scroll {
 @media (max-width: 768px) {
 
   #top {
-    min-height: 100%;
-    min-width: 100%;
-  }
-
-  .landingHeader {
-    color: #FFF;
-    font-size: 7em;
-  }
-
-  .topText {
-    margin-top: 380px 30px;
-  }
-
-  .topItem {
-    padding: 10% 0;
-    font-size: 2em;
-  }
-
-  .length, #playSound, .hide, .topHidden {
-    visibility: hidden;
-    display: none;
-  }
-
-  .topText i {
-    margin: 0;
-    padding: 0;
-    top: 0;
-  }
-
-  .header {
     background: url(../img/rsz_bg.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 100%;
   }
 
-  #down {
+  .topText {
+    margin-left: 20px;
+    margin-top: 230px;
+  }
+
+  .mobileText, .topText {
+    visibility: visible;
+    color: #FFF;
+    font-size: 25px;
+    padding: 0;
+  }
+
+  #contact i {
+    font-size: 45px;
+  }
+
+  .topItem {
     visibility: hidden;
     display: none;
   }

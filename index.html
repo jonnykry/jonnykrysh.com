@@ -57,23 +57,27 @@
         <!-- /Floating Widget -->
 
         <!-- Full Page Image Header Area -->
-        <div id="top" class="homepage header">
-          <video muted autoplay loop preload="auto" height="100%" width="100%" poster="img/bg.jpg" id="bgvid">
-            <source src="https://s3.amazonaws.com/webmovie.mp4/webmovie.mp4" type="video/mp4" />
-            <source src="https://s3.amazonaws.com/webmovie.mp4/webmovie.webm" type="video/webm" />
-          </video>
+        <div id="top" class="header">
 
-          <div class="layout">
-            <div class="topText">
-              <header class="topItem landingHeader pull-left">Hey, I'm Jonny Krysh!<br><br>                
-                <span class="topHidden">This is a day in the life of me:<br>a front-end software developer,<br>a skateboarder, and a juggler.</span><br><span class="length">(the video is 4:00 in length)</span><br><br>
-                <button id="playSound" class="btn btn-default">Enable / Disable Sound</button>
-                <div id="down"><a href="#about"><i class="fa fa-chevron-down scroll fa-2x"></i></a>
+            <video muted autoplay loop poster="none" preload="auto" id="bgvid">
+                <source src="https://s3.amazonaws.com/webmovie.mp4/webmovie.mp4" type="video/mp4" />
+                <source src="https://s3.amazonaws.com/webmovie.mp4/webmovie.webm" type="video/webm" />
+            </video>
+
+            <div class="layout">
+                <div class="topText">
+                <span class="mobileText">Hey, I'm Jonny Krysh!<br>I'm a software developer.<br>Welcome to my website! :)</span>
+                    <header class="topItem landingHeader pull-left">Hey, I'm Jonny Krysh!<br><br>                
+                        <span class="topHidden">This is a day in the life of me:<br>a software developer,<br>a skateboarder, and a juggler.</span><br><br>
+                        <button id="playVideo" class="btn btn-default">Play / Pause Video</button><br>
+                        <button id="playSound" class="btn btn-default">Enable / Disable Sound</button><br><br>
+                        <span class="length">Note: The video is 4:00 in length.<br>View in Chrome/Firefox for best experience.
+                            <br>If it isn't showing - wait a bit,<br>the webm takes long to load.</span><br>
+                        <div id="down"><a href="#about"><i class="fa fa-chevron-down scroll fa-2x"></i></a>
+                        </div>
+                    </header>                
                 </div>
-            </header>
-                
             </div>
-          </div>
 
         </div>
         <!-- /Full Page Image Header Area -->
@@ -217,11 +221,15 @@
                         <br>
                         <ul>
                             <li>
-                                <p><a href="https://github.com/jonnykry/jonnykrysh.com" target="_blank">jonnykrysh.com</a> - you're here. I created this based off a theme from <a href="http://startbootstrap.com" target="_blank">Start Bootstrap</a>. From there, I re-structured and chose my own design path.  I implemented many modifications, such as the video at the top and contact form below.</p>
+                                <p><a href="https://github.com/jonnykry/jonnykrysh.com" target="_blank">jonnykrysh.com</a> - You're here! I created this based off a theme from <a href="http://startbootstrap.com" target="_blank">Start Bootstrap</a>. From there, I re-structured and chose my own design path.  I implemented many modifications, such as the video at the top and contact form below.</p>
                             </li>
                             <br>
                             <li>
                                 <p><a href="http://www.jonnykrysh.com/lastfmnp" target="_blank">LastFM #NowPlaying</a> - Widget found in bottom right.  It was my first experimentation with Javascript / LastFM API.  I'm continuing to add more themes for it and make it easier to integrate with any website.  Also working on a play button to sample songs.</p>
+                            </li>
+                            <br>
+                            <li>
+                                <p><a href="https://jonnykry.github.io/threejs-expirements" target="_blank">ThreeJS Experiments</a> - Being able to create 3D renderings inside of your browser is <i>really</i> neat.  My favorite part about web development is the never-ending possibilities of what can be created.  Any idea can become a reality.</p>
                             </li>
                             <br>
                             <br>
@@ -329,8 +337,9 @@
                     <div class="col-md-12 text-center">
                         <hr>
                         <p>Jonny Krysh &mdash; &copy;2014
-                            <br>Video filmed by Jake Graves
+                            <br>Video and photos by Jake Alexander Greve.
                             <br>Song in video is Maps & Atlases - "Israeli Caves"
+                        </p>
                     </div>
                 </div>
             </div>
@@ -362,11 +371,24 @@
         <!-- Play Vid Sound JS -->
         <script>
           $('#playSound').click(function() {
-            var audioElm = document.getElementById('bgvid');
-            audioElm.muted = !audioElm.muted;
+            var audio = document.getElementById('bgvid');
+            audio.muted = !audio.muted;
           });
         </script>
         <!-- / PLay Vid Sound JS -->
+
+        <!-- Play Vid JS -->
+        <script>
+          $('#playVideo').click(function() {
+            var video = document.getElementById('bgvid');
+            if(video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+          });
+        </script>
+        <!-- / PLay Vid JS -->        
 
         <!-- Smooth Scrolling JS -->
         <script>
@@ -391,7 +413,7 @@
         <!-- Bouncing Buttons ( top and bottom ) -->
         <script>
             $(document).ready(function() {
-                $("#iconBounce").effect("bounce", {
+                $("#bouncer").effect("bounce", {
                     times: 3
                 }, 300);
             });

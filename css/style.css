@@ -127,11 +127,12 @@ p {
 }
 
 #bgvid { /* This is really confusing... */
-  position:absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  max-width: 100%;
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  width: auto;
+  min-width: 100%;
   height: auto;
 }
 
@@ -166,8 +167,7 @@ p {
 /* Top */
 
 .topText {
-  margin-top: 100px;
-  margin-left: 60px;
+  margin: 4% 1%;
   padding: 15px 25px;
   color: #FFF;
   display: inline-block;
@@ -227,6 +227,7 @@ p {
 /* Toolkit */
 
 .toolkit {
+  position: relative;
   background: #D6C4AB;
   padding: 50px 0;
   color: #000;
@@ -239,6 +240,7 @@ p {
 /* Projects */
 
 .projects {
+  position: relative;  
   color: #FFF;
   background: #1E252B;
   padding: 50px 0;
@@ -264,6 +266,7 @@ p {
 /* Contact */
 
 .contact {
+  position: relative;
   padding-top: 50px;
   color: #000;
   background: #D6C4AB;
@@ -322,6 +325,7 @@ p {
 /* Footer */
 
 footer {
+  position: relative;  
   background: #1E252B;
   color: white;
   padding: 50px 0;

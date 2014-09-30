@@ -21,7 +21,7 @@ var txt = displayTrack(track);
 
 // document.write(txt);
 
-// $("#widget").append(text);
+// $("#widget").append(txt);
 
 // Hides widget on landing page
 $(window).scroll(function() {

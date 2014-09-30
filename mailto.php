@@ -35,7 +35,7 @@
 	mail($myemail, $subject, $message);
 
 	/* Redirect visitor to the thank you page */
-	header('Location: http://www.jonnykrysh.com/');
+	header('Location: http://www.jonnykrysh.me/');
 	exit();
 
 	/* Functions we used */

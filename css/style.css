@@ -17,15 +17,19 @@ p {
 /* Side Menu */
 
 #sidebar-wrapper {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Yanone Kaffeesatz', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 27px;
   border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: 5px;
   margin-right: -250px;
   right: 0;
-  width: 250px;
+  width: 150px;
   background: #FFF;
   position: fixed;
-  height: 100%;
-  overflow-y: auto;
+  height: 260px;
+  overflow-y: hidden;
+  overflow-x: hidden;
   z-index: 1000;
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
@@ -45,7 +49,8 @@ p {
 
 .sidebar-nav li {
   line-height: 40px;
-  text-indent: 20px;
+  text-indent: 45px;
+  border-bottom: 1px solid gray;
 }
 
 .sidebar-nav li a {
@@ -68,7 +73,9 @@ p {
 .sidebar-nav > .sidebar-brand {
   height: 55px;
   line-height: 55px;
-  font-size: 18px;
+  font-size: 29px;
+  font-weight: 500;
+  border-bottom: 1px solid;
 }
 
 .sidebar-nav > .sidebar-brand a {

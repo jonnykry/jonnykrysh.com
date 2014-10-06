@@ -301,7 +301,7 @@ p {
 }
 
 .contact input, .contact textarea {
-  color: #FFF;
+  color: #000;
   background: none;
   border: 1px solid #000;
 }
@@ -310,7 +310,7 @@ p {
   color: #000;
   outline: none !important;
   border:1px solid #000;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 2px #000;
 }
 
 .contact .btn {
@@ -320,13 +320,13 @@ p {
 }
 
 .contact .btn:hover {
-  box-shadow: 0 0 10px #000;  
+  box-shadow: 0 0 2px #000;  
 }
 
 .contact .btn:focus {
   outline: none !important;
   border:1px solid #000;
-  box-shadow: 0 0 10px #000;  
+  box-shadow: 0 0 2px #000;  
 }
 
 /* Footer */

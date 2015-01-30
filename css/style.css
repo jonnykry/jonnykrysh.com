@@ -292,6 +292,7 @@ p { font-size: 1.8em; }
   background: none;
   border: 1px solid #000;
   color: #000;
+  font-weight: 600;
 }
 
 .contact .btn:hover { box-shadow: 0 0 2px #000; }

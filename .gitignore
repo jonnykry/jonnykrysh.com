@@ -1,0 +1,16 @@
+
+# Specific folders or files #
+css/bootstrap.css
+css/bootstrap.min.css
+js/bootstrap.js
+js/bootstrap.min.js
+js/jquery*
+img
+fonts
+font-awesome
+
+favicon.ico
+
+# OS generated files #
+.DS_Store
+.DS_Store?

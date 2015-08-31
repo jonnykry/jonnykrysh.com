@@ -10,6 +10,35 @@ body {
 
 p { font-size: 1.8em; }
 
+
+
+/* Alignment Hack */
+
+.alignCenter {
+    /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  /* Align the bootstrap's container vertically */
+  -webkit-box-align : center;
+  -webkit-align-items : center;
+  -moz-box-align : center;
+  -ms-flex-align : center;
+  align-items : center;
+
+  -webkit-box-pack : center;
+    -moz-box-pack : center;
+    -ms-flex-pack : center;
+  -webkit-justify-content : center;
+  justify-content : center;
+
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
 /* Side Menu */
 
 #sidebar-wrapper {
@@ -98,98 +127,61 @@ p { font-size: 1.8em; }
 
 .toggle { margin: 5px 5px 0 0; }
 
-/* Full Page Video and Header */
-
-.mobileText { visibility: hidden; }
-
-.header a { color: #000; }
-
-.header a:hover { color: #580000; }
-
-#top {
-  position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background: url(../img/bg2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#bgvid { /* This is really confusing... */
-  position:fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  width: auto;
-  min-width: 100%;
-  height: auto;
-}
-
-.header {
-  height: 100%;
-  width: 100%;
-  background: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.layout { /* Adds an opaque black layer over image background */
-  background: rgba(0, 0, 0, 0.3) no-repeat center center fixed;
-  display: table; /* Firefox fix */
-  height: 100%;
-  width: 100%;
-  position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 /* Section Headers */
 
-.sectionHead { font-size: 5em; }
+.sectionHead {
+  font-size: 5em;
+  font-family: 'Yanone Kaffeesatz', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 /* Top */
 
+.header a { color: #000; }
+.header a:hover { color: #580000; }
+.mobileText { visibility: hidden; }
+
+.landingPage {
+  position: relative;
+  background-color: #D6C4AB;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.landingPage i {
+  color: #333;
+}
+
+.layout { /* Adds an opaque black layer over image background */
+  background: #333 no-repeat center center fixed;
+  display: table; /* Firefox fix */
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+video {
+  border: 2px solid #333;
+  margin: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
 .topText {
-  margin: 4% 1%;
-  padding: 15px 25px;
-  color: #FFF;
-  display: inline-block;
-}
-
-#playVideo {
-  padding: 5px 25px;
-}
-
-.landingHeader, .sectionHead {
-  font-family: 'Yanone Kaffeesatz', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
 .landingHeader {
   padding: 25px 25px;
-  color: #FFF;
-  font-size: 2em;
+  color: #333;
+  font-size: 8em;
 }
 
-.landingHeader .btn {
-  background: none;
-  color: #FFF;
-  font-size: 20px;
-  margin-top: 15px;
-}
 
 .length {
   font-size: 20px;
-}
-
-#down {
-  margin-top: 25px;
-  margin-left: 65px;
 }
 
 /* About */
@@ -203,12 +195,16 @@ p { font-size: 1.8em; }
   color: white;
 }
 
+.about li {
+  font-size: 1.5em;
+}
+
 .about [class*="fa"] { /* Font-Awesome Hack for Centered Icons */
     display: inline-block;
     width: 100%;
 }
 
-.about icon { text-align: center; }
+.about .fa { text-align: center; }
 
 .about a {
   color: #FFF;
@@ -328,7 +324,6 @@ footer a:hover {
 
 .top-scroll a { text-decoration: none; }
 
-i.scroll { color: #FFF; }
 
 /* LastFM Widget */
 
@@ -367,7 +362,7 @@ i.scroll { color: #FFF; }
 
 /* Bouncing Arrows */
 
-#bouncer   {
+.bouncer {
   -webkit-animation: bounce 1s infinite;
   -moz-animation: bounce 1s infinite;
 }
@@ -400,13 +395,33 @@ i.scroll { color: #FFF; }
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100%;
     min-width: 100%;
   }
 
+  #top .fa {
+    color: #FFF;
+  }
+
+  .mobileTint {
+    background: rgba(0, 0, 0, 0.3) no-repeat center center fixed;
+    display: table; /* Firefox fix */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .landingHeader {
+    padding-top: 50%;
+    color: #FFF;
+  }
+
   .topText {
-    margin-left: 20px;
-    margin-top: 230px;
+    display: none;
+    visibility: hidden;
   }
 
   .mobileText, .topText {

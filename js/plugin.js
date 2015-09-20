@@ -9,11 +9,23 @@ $(document).ready( function() {
     var albumimg = null;
     var scrollYpos = 0;
 
-    var xml = httpGet("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jonnydoesmusic&api_key=c64600ddca04dfc310703c59fe1b5230");
+    // NOTE:  to re-use this component, you must use your own API key
+    // add a key to keys.json in the root directory with the same format as below
+    $.ajax({
+        dataType: 'json',
+        url: 'keys.json',
+        success: function(response) {
+            var url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jonnydoesmusic&api_key=' + response.apikeys.lastfm;
 
-    var track = xml.getElementsByTagName("track");
-
-    var txt = displayTrack(track);
+            // Request data from LastFM
+            $.ajax({
+                url: url,
+                success: function(response) {
+                    displayTrack(response.getElementsByTagName('track'));
+                }
+            });
+        }
+    });
 
     // Hides widget on landing page
     $(window).scroll(function() {
@@ -26,25 +38,14 @@ $(document).ready( function() {
         }
     });
 
-    function httpGet(theUrl)
-    {
-        var xmlHttp;
-        xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", theUrl, false);
-        xmlHttp.send(null);
-        return xmlHttp.responseXML;
-    }
-
     function displayTrack(track)
     {
-        // Sometimes LastFM does not supply the image. This will account for it.
-        // This occurs whenever there is a (feat. ____) tag on the current song.
-        // Taking the song before it works.
+        // Sometimes LastFM does not supply the image, which throws an error
+        // We account for this with the try/catch.
         try {
-            artist = (track[0].getElementsByTagName("artist")[0].childNodes[0].nodeValue);
             song = (track[0].getElementsByTagName("name")[0].childNodes[0].nodeValue);
 
-            // Take prev. song instead
+            // Take previous song if current one hasn't loaded
             if(song.indexOf('(') > -1) {
                 artist = (track[1].getElementsByTagName("artist")[0].childNodes[0].nodeValue);
                 song = (track[1].getElementsByTagName("name")[0].childNodes[0].nodeValue);
@@ -53,6 +54,7 @@ $(document).ready( function() {
             }
             else {
                 // add in album and img from current song
+                artist = (track[0].getElementsByTagName("artist")[0].childNodes[0].nodeValue);
                 album = (track[0].getElementsByTagName("album")[0].childNodes[0].nodeValue);
                 albumimg = (track[0].getElementsByTagName("image")[0].childNodes[0].nodeValue);
             }

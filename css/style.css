@@ -10,8 +10,6 @@ body {
 
 p { font-size: 1.8em; }
 
-
-
 /* Alignment Hack */
 
 .alignCenter {
@@ -393,10 +391,9 @@ footer a:hover {
 
 @media (max-width: 768px) {
 
-  #top {
-    background: url(../img/rsz_bg.jpg);
+  .landingPage {
+    background: url(../img/mobile.jpg);
     background-position: center center;
-    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     min-width: 100%;
@@ -406,9 +403,13 @@ footer a:hover {
     color: #FFF;
   }
 
+  #top .bouncer {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
   .mobileTint {
-    background: rgba(0, 0, 0, 0.3) no-repeat center center fixed;
-    display: table; /* Firefox fix */
+    background: rgba(0, 0, 0, 0.5) no-repeat center center fixed;
     height: 100%;
     width: 100%;
     position: relative;
@@ -419,7 +420,8 @@ footer a:hover {
   }
 
   .landingHeader {
-    padding-top: 50%;
+    padding-top: 150px;
+    font-size: 75px;
     color: #FFF;
   }
 

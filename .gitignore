@@ -16,3 +16,6 @@ favicon.ico
 
 # API Key Storage #
 keys.json
+
+# Editor #
+.idea
